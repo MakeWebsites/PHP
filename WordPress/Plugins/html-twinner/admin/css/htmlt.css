@@ -1,0 +1,47 @@
+
+.errorm {
+	font-weight: bold;
+	color:red;
+	text-decoration: underline; }
+.boton, .boxt {
+	margin-bottom: 0%;
+	padding-top: 0.5%;
+	padding-right: 1%;
+	padding-bottom: 0.5%;
+	padding-left: 1%;
+	width: auto;
+	display: inline-block;
+	}
+.boton {
+	-webkit-transition: all 0.1s ease-in-out;
+	-moz-transition:    all 0.1s ease-in-out;
+	-ms-transition:     all 0.1s ease-in-out;
+	-o-transition:      all 0.1s ease-in-out;
+	transition:         all 0.1s ease-in-out;
+	border-radius: 5px;
+	background-color: Gray;
+	cursor: pointer;
+	border: none;
+	border-radius: 5px;
+	box-shadow: none;
+	color: #fff;
+}
+a.boton {
+	text-decoration: none;
+	}
+a.boton:hover {
+	color: black;
+	background-color: Gainsboro;
+	border: none;
+	text-decoration: none; }
+
+.boxt {
+	border-style: dotted;
+}
+
+.dest {
+	margin-right: 5px;
+	font-size: 105%;
+	font-weight: bold;
+	text-decoration: underline;
+}
