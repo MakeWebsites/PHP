@@ -50,8 +50,6 @@ class htmlt_mb {
 			
 			//Retrieve the post-meta data
 			$faction = get_post_meta( $pid, '_htmlt_action', true );
-			
-			echo '<br>Faction vale '.$faction
 												
 			// Create buttons for Copy and Paste options ?>
 			<p>Action to be conducted after saving/updating this post:</p>
