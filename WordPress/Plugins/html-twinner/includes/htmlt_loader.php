@@ -4,6 +4,7 @@ include_once HTMLTP.'\admin\classes\htmlt-mbox.php';
 include_once HTMLTP.'\admin\classes\htmlt-admin-menu.php';
 
 
+
 //Custom style
 add_action( 'admin_enqueue_scripts', 'htmlt_style' );
 
@@ -12,5 +13,5 @@ function htmlt_style() {
     wp_enqueue_style( 'htmlt-style' );
 } 
 
-new htmlt_mb;
 new htmlt_admin_menu;
+new htmlt_mb;
