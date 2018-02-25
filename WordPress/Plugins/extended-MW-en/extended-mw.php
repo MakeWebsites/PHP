@@ -10,9 +10,9 @@ License: GPLv2
 //Registering bootstrap
 function mw_registers () {
 	wp_deregister_script('jquery'); //Deregister custom WordPress Jquery
-    wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js');
-	wp_enqueue_style('bootstrap-style', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css');
-    wp_enqueue_script( 'bootstrap-js', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js');
+    wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'); // Registering Google lib
+	wp_enqueue_style('bootstrap-style', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css'); // Registering Bootstrap 4
+    wp_enqueue_script( 'bootstrap-js', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js');
 	wp_enqueue_script( 'mw-js', get_stylesheet_directory_uri().'/mw.js');
 	wp_enqueue_style( 'mw-css', get_stylesheet_directory_uri().'/mw.css');
 }
@@ -36,20 +36,17 @@ remove_action( 'genesis_header', 'genesis_do_header' );
 //Custom header
 add_action ('genesis_header', 'mw_custom_header');
 function mw_custom_header() { ?>
-<div style="padding:1%" class="row">
-	<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
-	<a href="<?php site_url() ?>/contact/" title="Contact Make-Websites team">
-	<img  class="img-responsive pull-left" src="<?php site_url() ?>/images/make-websites.png" 
-		alt="Make Websites: Customizing WordPress" width="80px"></a>
-	<!--<h2><em><button type="button" style="margin-left:3px;" class="btn btn-success pull-left">We Make Websites</em></h2>-->
+<a href="<?php site_url() ?>/contact/" title="Contact Make-Websites team">
+	<img  class="img-fluid float-left align-middle" src="<?php site_url() ?>/images/make-websites.png" 
+		alt="Make Websites: Customizing WordPress" width="75px"></a>
+	<!--<div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+	<h2><em><button type="button" style="margin-left:3px;" class="btn btn-success pull-left">We Make Websites</em></h2>
 	<a href="mailto:we@make-websites.co.uk" title="Write us">
-	<img  class="img-responsive pull-left" src="<?php site_url() ?>/images/email-mw.gif" 
-		alt="Make Websites: Customizing WordPress" width="400px"></div></a>
-	<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-	<a href="http://es.make-websites.co.uk/"> <img class="img-responsive pull-right" src="http://make-websites.co.uk/images/es.png" 
+	<img  class="img-fluid float-left hidden-sm-down" src="<?php site_url() ?>/images/email-mw.gif" 
+		alt="Make Websites: Customizing WordPress" width="400px"></a></div>-->
+	<a href="http://es.make-websites.co.uk/"> <img class="img-fluid float-right align-top" src="http://make-websites.co.uk/images/es.png" 
 		alt="Make-Websites en español" title="Make-Websites en español"></a>
-	</div>
-</div> <?php
+	 <?php
 }
 
 //* Customize the Genesis credits
@@ -63,7 +60,7 @@ function mw_footer_creds_text() { ?>
 	echo ' &middot'; ?> <a href="http://make-websites.co.uk" title="Customizing WordPress Websites">Make Websites</a>
 	</p></div></div>
 	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 pull-left">
-	<a href="mailto:we@make-websites.co.uk" title="Write us"><img style="padding:3%;margin-top:-3%" class="img-responsive pull-right" src="<?php site_url() ?>/images/make-websites.png" 
+	<a href="mailto:we@make-websites.co.uk" title="Write us"><img style="padding:3%;margin-top:-3%" class="img-fluid pull-right" src="<?php site_url() ?>/images/make-websites.png" 
 		alt="Make Websites: Customizing WordPress" width="30%"></a></div></div> <?php
 }
 
