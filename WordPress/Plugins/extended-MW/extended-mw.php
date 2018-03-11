@@ -10,12 +10,6 @@ License: GPLv2
 //Registering bootstrap
 function mw_registers () {
 	
-/*$price = 450;
-$params = array(
-		'ajax_url' => admin_url( 'admin-ajax.php' ),
-		'price' => $price);
-$ajax_param = array(
-	'img_path' => plugin_dir_url( __FILE__ ).'prices/images/');*/
 	wp_deregister_script('jquery'); //Deregister custom WordPress Jquery
     wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'); // Registering Google lib
 	wp_enqueue_style('bootstrap-style', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css'); // Registering Bootstrap 4
@@ -51,11 +45,6 @@ function mw_custom_header() { ?>
 <a href="<?php site_url() ?>/contact/" title="Contact Make-Websites team">
 	<img  class="img-fluid float-left align-middle" src="<?php site_url() ?>/images/make-websites.png" 
 		alt="Make Websites: Customizing WordPress" width="75px"></a>
-	<!--<div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
-	<h2><em><button type="button" style="margin-left:3px;" class="btn btn-success pull-left">We Make Websites</em></h2>
-	<a href="mailto:we@make-websites.co.uk" title="Write us">
-	<img  class="img-fluid float-left hidden-sm-down" src="<?php site_url() ?>/images/email-mw.gif" 
-		alt="Make Websites: Customizing WordPress" width="400px"></a></div>-->
 	<a href="http://es.make-websites.co.uk/"> <img class="img-fluid float-right align-top" src="http://make-websites.co.uk/images/es.png" 
 		alt="Make-Websites en español" title="Make-Websites en español"></a>
 </div>
