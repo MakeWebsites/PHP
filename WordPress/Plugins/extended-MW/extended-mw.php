@@ -10,17 +10,19 @@ License: GPLv2
 //Registering bootstrap
 function mw_registers () {
 	
-$price = 450;
+/*$price = 450;
 $params = array(
 		'ajax_url' => admin_url( 'admin-ajax.php' ),
 		'price' => $price);
+$ajax_param = array(
+	'img_path' => plugin_dir_url( __FILE__ ).'prices/images/');*/
 	wp_deregister_script('jquery'); //Deregister custom WordPress Jquery
     wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'); // Registering Google lib
 	wp_enqueue_style('bootstrap-style', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css'); // Registering Bootstrap 4
     wp_enqueue_script( 'bootstrap-js', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js');
 	wp_enqueue_script( 'mw-js', get_stylesheet_directory_uri().'/mw.js');
 	wp_enqueue_script( 'mw-ajax', plugin_dir_url( __FILE__ ).'prices/ajax-prices.js');
-	wp_localize_script( 'mw-ajax', 'mw', $params);
+	//wp_localize_script( 'mw-ajax', 'mw', $ajax_params);
 	wp_enqueue_style( 'mw-css', get_stylesheet_directory_uri().'/mw.css');
 	/*wp_enqueue_script('bootstrap_validator_js', '//cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.2/js/bootstrapValidator.min.js');
 	wp_enqueue_style('bootstrap_validator_css', '//cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.2/css/bootstrapValidator.min.css');*/
@@ -97,48 +99,6 @@ function mw_login_logo_url_title() {
 add_filter( 'login_headertitle', 'mw_login_logo_url_title' );
 
 // Processing the prices forms
-/*add_action('wp_ajax_mw_prices', 'mw_prices_form');
-add_action('wp_ajax_nopriv_mw_prices', 'mw_prices_form');
-function mw_prices_form() {
-include_once plugin_dir_url( __FILE__ ).'prices/price-add.php';
-
-$npages = $_POST['npages'];
-$pcase = $_POST['pcase'];
-
-$data = array();
-
-function validate_npages ($npages) {
-	
-		if (is_numeric($npages) and (intval($npages) == $npages)) {
-			if (($npages > 2) and ($npages < 11))
-				$er_message = 'correct';
-			else
-			$er_message = 'Numbers of pages must be higher than 2 and lower than 11';	}
-		else
-		$er_message = 'Please enter an integer number';
-return $er_message; }
-
-$message = validate_npages($npages);
-
-//if ($message == 'correct') {
-	
-	$np = new price_add($npages, $pcase);
-	$dat['price'] = $np->get_price();
-	//$page = $np->get_page();
-	
-	//$page = 'http://mw-en/prices/'.$page;
-	
-	/*echo '<p> La pagina es '.$page.'</p>';
-	echo '<p> y el precio es '.$_SESSION['nprice'].'</p>';
-	
-
-	//}
-
-$dat['message'] = $message;
-	
-$data = json_encode($data);
-die(); // required. To let AJAX know to end the request.*/
-
 add_action( 'wp_ajax_mw_prices_form', 'mw_prices_form' );
 add_action( 'wp_ajax_nopriv_mw_prices_form', 'mw_prices_form' );
 function mw_prices_form() {
@@ -158,6 +118,7 @@ function mw_prices_form() {
 		include_once plugin_dir_path( __FILE__ ).'prices/price-add.php';
 		$npages = $_POST['npages'];
 		$pcase = $_POST['pcase'];
+		$response['pcase'] = $pcase;
 		$np = new price_add($npages, $pcase);
 		$response['price'] = $np->get_price();
 		}

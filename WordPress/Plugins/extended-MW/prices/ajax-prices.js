@@ -1,12 +1,12 @@
 jQuery(document).ready(function($) {
 var pcase = $('#pcase').val();
-	var price;
+	/*var price;
 		switch (pcase) {
-			case 'ml': case 'wp': price = 450; break;
-			case 'seo': price = 390; break; }
+			case '450': price = 450; break;
+			case '390': price = 390; break; }*/
 
 		
-$( "#ini-mp" ).html( "Basic price: &pound;" + price ); 
+$( "#ini-mp" ).html( "Basic price: &pound;" + pcase ); 
 	
 $('.fms').on('submit', function(e) {
 		e.preventDefault();
@@ -18,9 +18,13 @@ $( "#ini-cp" ).html('Calculating...');
 			
 			var data = JSON.parse(response);
 				if (data['error'] == false) {
-					$( "#ini-cp" ).html( "Current price: &pound;<mark>" + data['price'] + "</mark>"); }
+					var price = data['price'];
+					if (price > data['pcase'])
+						$( "#ini-cp" ).html( "Current price: &pound;<mark>" + price + "</mark>"); 
+					else
+						$( "#ini-cp" ).html( "" );}
 			else
-			alert(data['error_message'])
+			$( "#ini-cp" ).html( "<img src='../../images/error.gif'>" + data['error_message']);
 		}, 'json');
 	});
  
