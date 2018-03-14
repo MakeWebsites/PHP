@@ -1,0 +1,719 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: ofertas-plugin\n"
+"POT-Creation-Date: 2013-12-14 17:26+0100\n"
+"PO-Revision-Date: 2013-12-14 17:27+0100\n"
+"Last-Translator: Angel <angel.utset@gmail.com>\n"
+"Language-Team: Angel Utset\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.2\n"
+"X-Poedit-KeywordsList: __;_e;_x\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+"X-Poedit-SearchPath-1: .\n"
+
+#: ../email-recruiters.inc.php:91 ../functions.inc.php:21
+#: ../personal-options.inc.php:66 ../debug/functions.inc.php:21
+#: ../debug/ofertas-plugin.php:339 ../subidos/email-recruiters.inc.php:91
+#: ../subidos/functions.inc.php:21 ../subidos/personal-options.inc.php:66
+msgid "United Kingdom"
+msgstr "Reino Unido"
+
+#: ../email-recruiters.inc.php:93 ../functions.inc.php:21
+#: ../personal-options.inc.php:68 ../debug/functions.inc.php:21
+#: ../debug/ofertas-plugin.php:341 ../subidos/email-recruiters.inc.php:93
+#: ../subidos/functions.inc.php:21 ../subidos/personal-options.inc.php:68
+msgid "France"
+msgstr "Francia"
+
+#: ../email-recruiters.inc.php:95 ../functions.inc.php:22
+#: ../personal-options.inc.php:70 ../debug/functions.inc.php:22
+#: ../debug/ofertas-plugin.php:343 ../subidos/email-recruiters.inc.php:95
+#: ../subidos/functions.inc.php:22 ../subidos/personal-options.inc.php:70
+msgid "Germany"
+msgstr "Alemania"
+
+#: ../functions.inc.php:18 ../functions.inc.php:19 ../functions.inc.php:47
+#: ../functions.inc.php:48 ../functions.inc.php:70 ../functions.inc.php:71
+#: ../functions.inc.php:108 ../functions.inc.php:109 ../functions.inc.php:141
+#: ../functions.inc.php:142 ../functions.inc.php:179 ../functions.inc.php:180
+#: ../functions.inc.php:207 ../functions.inc.php:208
+#: ../debug/functions.inc.php:18 ../debug/functions.inc.php:19
+#: ../debug/functions.inc.php:47 ../debug/functions.inc.php:48
+#: ../debug/functions.inc.php:70 ../debug/functions.inc.php:71
+#: ../debug/functions.inc.php:108 ../debug/functions.inc.php:109
+#: ../debug/functions.inc.php:141 ../debug/functions.inc.php:142
+#: ../debug/functions.inc.php:179 ../debug/functions.inc.php:180
+#: ../debug/functions.inc.php:207 ../debug/functions.inc.php:208
+#: ../subidos/functions.inc.php:18 ../subidos/functions.inc.php:19
+#: ../subidos/functions.inc.php:47 ../subidos/functions.inc.php:48
+#: ../subidos/functions.inc.php:70 ../subidos/functions.inc.php:71
+#: ../subidos/functions.inc.php:108 ../subidos/functions.inc.php:109
+#: ../subidos/functions.inc.php:141 ../subidos/functions.inc.php:142
+#: ../subidos/functions.inc.php:179 ../subidos/functions.inc.php:180
+#: ../subidos/functions.inc.php:207 ../subidos/functions.inc.php:208
+msgid "Option selected!"
+msgstr "Opción seleccionada!"
+
+#: ../functions.inc.php:22 ../personal-options.inc.php:72
+msgid "Belgium"
+msgstr "Belgica"
+
+#: ../functions.inc.php:22 ../personal-options.inc.php:74
+msgid "Switzerland"
+msgstr "Suiza"
+
+#: ../functions.inc.php:28 ../debug/functions.inc.php:28
+#: ../subidos/functions.inc.php:28
+msgid "Country of the job offer"
+msgstr "País de la Oferta de Empleo"
+
+#: ../functions.inc.php:38 ../functions.inc.php:60 ../functions.inc.php:99
+#: ../functions.inc.php:131 ../functions.inc.php:167 ../functions.inc.php:198
+#: ../functions.inc.php:221 ../functions.inc.php:245 ../functions.inc.php:266
+#: ../debug/functions.inc.php:38 ../debug/functions.inc.php:60
+#: ../debug/functions.inc.php:99 ../debug/functions.inc.php:131
+#: ../debug/functions.inc.php:167 ../debug/functions.inc.php:198
+#: ../debug/functions.inc.php:221 ../debug/functions.inc.php:245
+#: ../debug/functions.inc.php:266 ../subidos/functions.inc.php:38
+#: ../subidos/functions.inc.php:60 ../subidos/functions.inc.php:99
+#: ../subidos/functions.inc.php:131 ../subidos/functions.inc.php:167
+#: ../subidos/functions.inc.php:198 ../subidos/functions.inc.php:221
+#: ../subidos/functions.inc.php:245 ../subidos/functions.inc.php:266
+msgid "Submit"
+msgstr "Enviar"
+
+#: ../functions.inc.php:51 ../debug/functions.inc.php:51
+#: ../subidos/functions.inc.php:51
+msgid "Location"
+msgstr "Lugar"
+
+#: ../functions.inc.php:62 ../debug/functions.inc.php:62
+#: ../subidos/functions.inc.php:62
+msgid "City or region of the job"
+msgstr "Ciudad o región de la oferta de empleo"
+
+#: ../functions.inc.php:72 ../debug/functions.inc.php:72
+#: ../subidos/functions.inc.php:72
+msgid "Choose one or more categories that fit the job"
+msgstr "Escoja una o más categorías que se ajusten al empleo"
+
+#: ../functions.inc.php:74 ../debug/functions.inc.php:74
+#: ../subidos/functions.inc.php:74
+msgid "Administration"
+msgstr "Administración"
+
+#: ../functions.inc.php:74 ../debug/functions.inc.php:74
+#: ../subidos/functions.inc.php:74
+msgid "Education"
+msgstr "Educación"
+
+#: ../functions.inc.php:74 ../debug/functions.inc.php:74
+#: ../subidos/functions.inc.php:74
+msgid "Engineers"
+msgstr "Ingenieros"
+
+#: ../functions.inc.php:75 ../debug/functions.inc.php:75
+#: ../subidos/functions.inc.php:75
+msgid "Health"
+msgstr "Salud"
+
+#: ../functions.inc.php:75 ../debug/functions.inc.php:75
+#: ../subidos/functions.inc.php:75
+msgid "Computers"
+msgstr "Informática y ordenadores"
+
+#: ../functions.inc.php:75 ../debug/functions.inc.php:75
+#: ../subidos/functions.inc.php:75
+msgid "Construction"
+msgstr "Construcción"
+
+#: ../functions.inc.php:76 ../debug/functions.inc.php:76
+#: ../subidos/functions.inc.php:76
+msgid "Tourism"
+msgstr "Turismo"
+
+#: ../functions.inc.php:76 ../debug/functions.inc.php:76
+#: ../subidos/functions.inc.php:76
+msgid "Trade and retail"
+msgstr "Comercio"
+
+#: ../functions.inc.php:76 ../debug/functions.inc.php:76
+#: ../subidos/functions.inc.php:76
+msgid "House services"
+msgstr "Servicios"
+
+#: ../functions.inc.php:77 ../debug/functions.inc.php:77
+#: ../subidos/functions.inc.php:77
+msgid "Agriculture"
+msgstr "Agricultura"
+
+#: ../functions.inc.php:77 ../debug/functions.inc.php:77
+#: ../subidos/functions.inc.php:77
+msgid "Languages and Translation"
+msgstr "Idiomas y Traducción"
+
+#: ../functions.inc.php:78 ../debug/functions.inc.php:78
+#: ../subidos/functions.inc.php:78
+msgid "Transports"
+msgstr "Transportes"
+
+#: ../functions.inc.php:78 ../debug/functions.inc.php:78
+#: ../subidos/functions.inc.php:78
+msgid "Factories"
+msgstr "Fábricas"
+
+#: ../functions.inc.php:78 ../debug/functions.inc.php:78
+#: ../subidos/functions.inc.php:78
+msgid "Security"
+msgstr "Seguridad"
+
+#: ../functions.inc.php:79 ../debug/functions.inc.php:79
+#: ../subidos/functions.inc.php:79
+msgid "Finances"
+msgstr "Finanzas"
+
+#: ../functions.inc.php:79 ../debug/functions.inc.php:79
+#: ../subidos/functions.inc.php:79
+msgid "Arts and Entertainment"
+msgstr "Arte y Espectáculos"
+
+#: ../functions.inc.php:80 ../debug/functions.inc.php:80
+#: ../subidos/functions.inc.php:80
+msgid "Accounting"
+msgstr "Contabilidad"
+
+#: ../functions.inc.php:80 ../debug/functions.inc.php:80
+#: ../subidos/functions.inc.php:80
+msgid "Customer Relations"
+msgstr "Atención al cliente"
+
+#: ../functions.inc.php:80 ../debug/functions.inc.php:80
+#: ../subidos/functions.inc.php:80
+msgid "Lawyers"
+msgstr "Abogados"
+
+#: ../functions.inc.php:81 ../debug/functions.inc.php:81
+#: ../subidos/functions.inc.php:81
+msgid "Research & Development"
+msgstr "Investigación y Desarrollo"
+
+#: ../functions.inc.php:81 ../debug/functions.inc.php:81
+#: ../subidos/functions.inc.php:81
+msgid "Graduates"
+msgstr "Licenciados"
+
+#: ../functions.inc.php:115 ../debug/functions.inc.php:115
+#: ../subidos/functions.inc.php:115
+msgid "Job title"
+msgstr "Título del empleo"
+
+#: ../functions.inc.php:116 ../debug/functions.inc.php:116
+#: ../subidos/functions.inc.php:116
+msgid "Enter a title for this job of up to 30 characters"
+msgstr "Escriba un título para este empleo, de hasta 30 caracteres"
+
+#: ../functions.inc.php:117 ../debug/functions.inc.php:117
+#: ../subidos/functions.inc.php:117
+msgid "Text too long. Only 30 characters"
+msgstr "Es un texto muy largo. Sólo se permiten 30 caracteres"
+
+#: ../functions.inc.php:150 ../debug/functions.inc.php:150
+#: ../subidos/functions.inc.php:150
+msgid "Approximate annual Salary"
+msgstr "Salario anual aproximado"
+
+#: ../functions.inc.php:151 ../debug/functions.inc.php:151
+#: ../subidos/functions.inc.php:151
+msgid "Enter zero if wage is not included in the job post"
+msgstr "Escriba cero si el salario no se incluye en la oferta de empleo"
+
+#: ../functions.inc.php:152 ../debug/functions.inc.php:152
+#: ../subidos/functions.inc.php:152
+msgid "The annual salary must be an integer"
+msgstr "El salario anual debe ser un número entero"
+
+#: ../functions.inc.php:187 ../debug/functions.inc.php:187
+#: ../subidos/functions.inc.php:187
+msgid "Job description"
+msgstr "Descripción del Empleo"
+
+#: ../functions.inc.php:188 ../debug/functions.inc.php:188
+#: ../subidos/functions.inc.php:188
+msgid "Enter the complete description of the job (in English)"
+msgstr "Entre la descripción del empleo (en idioma local)"
+
+#: ../functions.inc.php:255 ../debug/functions.inc.php:255
+#: ../subidos/functions.inc.php:255
+msgid "Publish now?"
+msgstr "¿Publicar ahora?"
+
+#: ../functions.inc.php:258 ../debug/functions.inc.php:258
+#: ../subidos/functions.inc.php:258
+msgid "Yes"
+msgstr "Si"
+
+#: ../functions.inc.php:262 ../debug/functions.inc.php:262
+#: ../subidos/functions.inc.php:262
+msgid "No"
+msgstr "No"
+
+#: ../ofertas-dashboard.php:99 ../debug/ofertas-dashboard.php:56
+#: ../subidos/ofertas-dashboard.php:69
+msgid "About Yourself"
+msgstr "Sobre usted"
+
+#: ../ofertas-formulario.php:173
+msgid "Clear the form"
+msgstr "Borrar formulario"
+
+#: ../ofertas-formulario.php:178 ../subidos/ofertas-formulario.php:139
+msgid "Please email"
+msgstr "Por favor escriba a"
+
+#: ../ofertas-formulario.php:178 ../subidos/ofertas-formulario.php:139
+msgid "Email us"
+msgstr "Escribanos un correo"
+
+#: ../ofertas-formulario.php:179 ../subidos/ofertas-formulario.php:140
+msgid "with any further enquiry"
+msgstr "para cualquier pregunta adicional"
+
+#: ../ofertas-formulario.php:270 ../ofertas-plugin.php:106
+#: ../debug/ofertas-formulario.php:241 ../debug/ofertas-plugin.php:105
+#: ../subidos/ofertas-formulario.php:230 ../subidos/ofertas-plugin.php:106
+msgid "New Job"
+msgstr "Nuevo Empleo"
+
+#: ../ofertas-formulario.php:271 ../debug/ofertas-formulario.php:242
+#: ../subidos/ofertas-formulario.php:231
+msgid "View Job"
+msgstr "Ver Empleo"
+
+#: ../ofertas-formulario.php:272 ../ofertas-plugin.php:104
+#: ../debug/ofertas-formulario.php:243 ../debug/ofertas-plugin.php:103
+#: ../subidos/ofertas-formulario.php:232 ../subidos/ofertas-plugin.php:104
+msgid "Edit Job"
+msgstr "Editar Empleo"
+
+#: ../ofertas-formulario.php:297 ../debug/ofertas-formulario.php:271
+#: ../subidos/ofertas-formulario.php:257
+msgid "Job Offer Form"
+msgstr "Formulario de Oferta de Empleo"
+
+#: ../ofertas-plugin.php:49 ../debug/ofertas-plugin.php:48
+#: ../subidos/ofertas-plugin.php:49
+msgid "Job Offers"
+msgstr "Ofertas de Empleo"
+
+#: ../ofertas-plugin.php:50 ../ofertas-plugin.php:255
+#: ../debug/ofertas-plugin.php:49 ../debug/ofertas-plugin.php:275
+#: ../subidos/ofertas-plugin.php:50 ../subidos/ofertas-plugin.php:255
+msgid "Job Offer"
+msgstr "Oferta de Empleo"
+
+#: ../ofertas-plugin.php:51 ../ofertas-plugin.php:58
+#: ../debug/ofertas-plugin.php:50 ../debug/ofertas-plugin.php:57
+#: ../subidos/ofertas-plugin.php:51 ../subidos/ofertas-plugin.php:58
+msgid "Edit Jobs"
+msgstr "Editar Empleos"
+
+#: ../ofertas-plugin.php:52 ../debug/ofertas-plugin.php:51
+#: ../subidos/ofertas-plugin.php:52
+msgid "All Jobs"
+msgstr "Todos los Empleos"
+
+#: ../ofertas-plugin.php:53 ../debug/ofertas-plugin.php:52
+#: ../subidos/ofertas-plugin.php:53
+msgid "View Jobs"
+msgstr "Ver Empleo"
+
+#: ../ofertas-plugin.php:54 ../debug/ofertas-plugin.php:53
+#: ../subidos/ofertas-plugin.php:54
+msgid "Search Jobs"
+msgstr "Buscar Empleo"
+
+#: ../ofertas-plugin.php:55 ../debug/ofertas-plugin.php:54
+#: ../subidos/ofertas-plugin.php:55
+msgid "No Jobs"
+msgstr "No hay empleo"
+
+#: ../ofertas-plugin.php:56 ../debug/ofertas-plugin.php:55
+#: ../subidos/ofertas-plugin.php:56
+msgid "Not in the trash"
+msgstr ""
+
+#: ../ofertas-plugin.php:102 ../ofertas-plugin.php:108
+#: ../ofertas-plugin.php:258 ../debug/ofertas-plugin.php:101
+#: ../debug/ofertas-plugin.php:107 ../debug/ofertas-plugin.php:278
+#: ../subidos/ofertas-plugin.php:102 ../subidos/ofertas-plugin.php:108
+#: ../subidos/ofertas-plugin.php:258
+msgid "Jobs"
+msgstr "Empleos"
+
+#: ../ofertas-plugin.php:103 ../debug/ofertas-plugin.php:102
+#: ../subidos/ofertas-plugin.php:103
+msgid "Job"
+msgstr "Empleo"
+
+#: ../ofertas-plugin.php:105 ../debug/ofertas-plugin.php:104
+#: ../subidos/ofertas-plugin.php:105
+msgid "Update Job"
+msgstr "Actualizar Empleo"
+
+#: ../ofertas-plugin.php:107 ../debug/ofertas-plugin.php:106
+#: ../subidos/ofertas-plugin.php:107
+msgid "New Job Name"
+msgstr "Nuevo Tipo de Empleo"
+
+#: ../ofertas-plugin.php:130 ../debug/ofertas-plugin (2).php:151 (3).php:151
+#: (4).php:223 ../debug/ofertas-plugin.php:129
+#: ../subidos/ofertas-plugin.php:130
+#, fuzzy
+msgid "Edit trabajo-en"
+msgstr "Editar Empleo"
+
+#: ../ofertas-plugin.php:131 ../debug/ofertas-plugin (2).php:152 (3).php:152
+#: (4).php:224 ../debug/ofertas-plugin.php:130
+#: ../subidos/ofertas-plugin.php:131
+#, fuzzy
+msgid "Update trabajo-en"
+msgstr "Actualizar Empleo"
+
+#: ../ofertas-plugin.php:132 ../debug/ofertas-plugin (2).php:153 (3).php:153
+#: (4).php:225 ../debug/ofertas-plugin.php:131
+#: ../subidos/ofertas-plugin.php:132
+#, fuzzy
+msgid "Add New trabajo-en"
+msgstr "Nuevo Empleo"
+
+#: ../ofertas-plugin.php:133 ../debug/ofertas-plugin (2).php:154 (3).php:154
+#: (4).php:226 ../debug/ofertas-plugin.php:132
+#: ../subidos/ofertas-plugin.php:133
+#, fuzzy
+msgid "New trabajo-en Name"
+msgstr "Nuevo Tipo de Empleo"
+
+#: ../ofertas-plugin.php:237 ../debug/ofertas-plugin.php:257
+#: ../subidos/ofertas-plugin.php:237
+msgid "We help Spanish people to find a job abroad"
+msgstr "Ayudamos a encontrar trabajo fuera de España"
+
+#: ../ofertas-plugin.php:256 ../debug/ofertas-plugin.php:276
+#: ../subidos/ofertas-plugin.php:256
+msgid "Source"
+msgstr "Fuente"
+
+#: ../ofertas-plugin.php:259 ../debug/ofertas-plugin (2).php:191 (3).php:191
+#: (4).php:263 ../debug/ofertas-plugin.php:279
+#: ../subidos/ofertas-plugin.php:259
+msgid "Date"
+msgstr "Fecha"
+
+#: ../personal-options.inc.php:9 ../subidos/personal-options.inc.php:9
+msgid "About your Recruiter Activity"
+msgstr "Acerca de la Agencia de Empleo"
+
+#: ../personal-options.inc.php:14 ../subidos/personal-options.inc.php:14
+msgid "Recruiter company name"
+msgstr "Nombre de la agencia de empleo"
+
+#: ../personal-options.inc.php:36 ../debug/ofertas-plugin.php:310
+#: ../subidos/personal-options.inc.php:36
+msgid "Preferred Language"
+msgstr "Lenguaje Preferido"
+
+#: ../personal-options.inc.php:62 ../debug/ofertas-plugin.php:335
+#: ../debug/restos.php:8 ../subidos/personal-options.inc.php:62
+msgid "Country for the job offers"
+msgstr "Pais para las Ofertas de Empleo"
+
+#: ../personal-options.inc.php:76
+msgid "Any available country"
+msgstr "Cualquier país disponible"
+
+#: ../debug/ofertas-plugin (2).php:124 (2).php:190 (3).php:124 (3).php:190
+#: (4).php:196 (4).php:262
+msgid "Empleos"
+msgstr ""
+
+#: ../debug/ofertas-plugin (2).php:125 (2).php:130 (3).php:125 (3).php:130
+#: (4).php:197 (4).php:202
+msgid "Empleo"
+msgstr ""
+
+#: ../debug/ofertas-plugin (2).php:126 (3).php:126 (4).php:198
+msgid "Editar empleo"
+msgstr ""
+
+#: ../debug/ofertas-plugin (2).php:127 (3).php:127 (4).php:199
+msgid "Actualizar Empleo"
+msgstr ""
+
+#: ../debug/ofertas-plugin (2).php:128 (3).php:128 (4).php:200
+msgid "Nueva Empleo"
+msgstr ""
+
+#: ../debug/ofertas-plugin (2).php:129 (3).php:129 (4).php:201
+msgid "Nuevo Empleo Nombre"
+msgstr ""
+
+#: ../debug/ofertas-plugin (2).php:144 (3).php:144 (4).php:216
+msgid "trabajos-en"
+msgstr ""
+
+#: ../debug/ofertas-plugin (2).php:145 (2).php:158 (3).php:145 (3).php:158
+#: (4).php:217 (4).php:230
+msgid "trabajo-en"
+msgstr ""
+
+#: ../debug/ofertas-plugin (2).php:146 (3).php:146 (4).php:218
+#, fuzzy
+msgid "Search trabajo-en"
+msgstr "Buscar Empleo"
+
+#: ../debug/ofertas-plugin (2).php:147 (3).php:147 (4).php:219
+msgid "Popular trabajo-en"
+msgstr ""
+
+#: ../debug/ofertas-plugin (2).php:148 (3).php:148 (4).php:220
+#, fuzzy
+msgid "All trabajo-en"
+msgstr "Todos los Empleos"
+
+#: ../debug/ofertas-plugin (2).php:155 (3).php:155 (4).php:227
+msgid "Separate writers with commas"
+msgstr ""
+
+#: ../debug/ofertas-plugin (2).php:156 (3).php:156 (4).php:228
+msgid "Add or remove writers"
+msgstr ""
+
+#: ../debug/ofertas-plugin (2).php:157 (3).php:157 (4).php:229
+#, fuzzy
+msgid "Choose from the most used writers"
+msgstr "Escoja una o más categorías que se ajusten al empleo"
+
+#: ../debug/ofertas-plugin.php:304
+msgid "Other relevant information"
+msgstr "Otra información relevante"
+
+#: ../debug/pluggable.php:479
+msgid "<strong>ERROR</strong>: Invalid username or incorrect password."
+msgstr ""
+
+#: ../debug/pluggable.php:808
+msgid ""
+"You should specify a nonce action to be verified by using the first "
+"parameter."
+msgstr ""
+
+#: ../debug/pluggable.php:1014
+#, fuzzy, php-format
+msgid "New comment on your post \"%s\""
+msgstr "Acerca de la Agencia de Empleo"
+
+#: ../debug/pluggable.php:1016 ../debug/pluggable.php:1129
+#, php-format
+msgid "Author : %1$s (IP: %2$s , %3$s)"
+msgstr ""
+
+#: ../debug/pluggable.php:1017 ../debug/pluggable.php:1130
+#, php-format
+msgid "E-mail : %s"
+msgstr ""
+
+#: ../debug/pluggable.php:1018 ../debug/pluggable.php:1028
+#: ../debug/pluggable.php:1037 ../debug/pluggable.php:1116
+#: ../debug/pluggable.php:1123 ../debug/pluggable.php:1131
+#, php-format
+msgid "URL    : %s"
+msgstr ""
+
+#: ../debug/pluggable.php:1019 ../debug/pluggable.php:1132
+#, php-format
+msgid "Whois  : http://whois.arin.net/rest/ip/%s"
+msgstr ""
+
+#: ../debug/pluggable.php:1020 ../debug/pluggable.php:1133
+msgid "Comment: "
+msgstr ""
+
+#: ../debug/pluggable.php:1021
+#, fuzzy
+msgid "You can see all comments on this post here: "
+msgstr "Todos los Empleos"
+
+#: ../debug/pluggable.php:1023
+#, php-format
+msgid "[%1$s] Comment: \"%2$s\""
+msgstr ""
+
+#: ../debug/pluggable.php:1025
+#, fuzzy, php-format
+msgid "New trackback on your post \"%s\""
+msgstr "Acerca de la Agencia de Empleo"
+
+#: ../debug/pluggable.php:1027 ../debug/pluggable.php:1036
+#, php-format
+msgid "Website: %1$s (IP: %2$s , %3$s)"
+msgstr ""
+
+#: ../debug/pluggable.php:1029 ../debug/pluggable.php:1038
+msgid "Excerpt: "
+msgstr ""
+
+#: ../debug/pluggable.php:1030
+#, fuzzy
+msgid "You can see all trackbacks on this post here: "
+msgstr "Todos los Empleos"
+
+#: ../debug/pluggable.php:1032
+#, php-format
+msgid "[%1$s] Trackback: \"%2$s\""
+msgstr ""
+
+#: ../debug/pluggable.php:1034
+#, fuzzy, php-format
+msgid "New pingback on your post \"%s\""
+msgstr "Acerca de la Agencia de Empleo"
+
+#: ../debug/pluggable.php:1039
+#, fuzzy
+msgid "You can see all pingbacks on this post here: "
+msgstr "Todos los Empleos"
+
+#: ../debug/pluggable.php:1041
+#, php-format
+msgid "[%1$s] Pingback: \"%2$s\""
+msgstr ""
+
+#: ../debug/pluggable.php:1044
+#, php-format
+msgid "Permalink: %s"
+msgstr ""
+
+#: ../debug/pluggable.php:1046 ../debug/pluggable.php:1139
+#, php-format
+msgid "Trash it: %s"
+msgstr ""
+
+#: ../debug/pluggable.php:1048 ../debug/pluggable.php:1141
+#, php-format
+msgid "Delete it: %s"
+msgstr ""
+
+#: ../debug/pluggable.php:1049 ../debug/pluggable.php:1142
+#, php-format
+msgid "Spam it: %s"
+msgstr ""
+
+#: ../debug/pluggable.php:1113
+#, fuzzy, php-format
+msgid "A new trackback on the post \"%s\" is waiting for your approval"
+msgstr "Acerca de la Agencia de Empleo"
+
+#: ../debug/pluggable.php:1115 ../debug/pluggable.php:1122
+#, php-format
+msgid "Website : %1$s (IP: %2$s , %3$s)"
+msgstr ""
+
+#: ../debug/pluggable.php:1117
+msgid "Trackback excerpt: "
+msgstr ""
+
+#: ../debug/pluggable.php:1120
+#, fuzzy, php-format
+msgid "A new pingback on the post \"%s\" is waiting for your approval"
+msgstr "Acerca de la Agencia de Empleo"
+
+#: ../debug/pluggable.php:1124
+msgid "Pingback excerpt: "
+msgstr ""
+
+#: ../debug/pluggable.php:1127
+#, fuzzy, php-format
+msgid "A new comment on the post \"%s\" is waiting for your approval"
+msgstr "Acerca de la Agencia de Empleo"
+
+#: ../debug/pluggable.php:1137
+#, php-format
+msgid "Approve it: %s"
+msgstr ""
+
+#: ../debug/pluggable.php:1148
+#, fuzzy, php-format
+msgid "[%1$s] Please moderate: \"%2$s\""
+msgstr "Por favor escriba a"
+
+#: ../debug/pluggable.php:1174
+#, php-format
+msgid "Password Lost and Changed for user: %s"
+msgstr ""
+
+#: ../debug/pluggable.php:1178
+#, php-format
+msgid "[%s] Password Lost/Changed"
+msgstr ""
+
+#: ../debug/pluggable.php:1202
+#, fuzzy, php-format
+msgid "New user registration on your site %s:"
+msgstr "Acerca de la Agencia de Empleo"
+
+#: ../debug/pluggable.php:1203 ../debug/pluggable.php:1211
+#, php-format
+msgid "Username: %s"
+msgstr ""
+
+#: ../debug/pluggable.php:1204
+#, php-format
+msgid "E-mail: %s"
+msgstr ""
+
+#: ../debug/pluggable.php:1206
+#, fuzzy, php-format
+msgid "[%s] New User Registration"
+msgstr "Nuevo Empleo"
+
+#: ../debug/pluggable.php:1212
+#, php-format
+msgid "Password: %s"
+msgstr ""
+
+#: ../debug/pluggable.php:1215
+#, fuzzy, php-format
+msgid "[%s] Your username and password"
+msgstr "Acerca de la Agencia de Empleo"
+
+#~ msgid "Recruiter company web site"
+#~ msgstr "Sitio web de la agencia de empleo"
+
+#~ msgid "Recruiter company logo"
+#~ msgstr "Logo de la agencia de empleo"
+
+#~ msgid "This service is free for recruiters"
+#~ msgstr "Este servicio es gratuito para empleadores"
+
+#~ msgid "administrator"
+#~ msgstr "Administrador"
+
+#~ msgid ""
+#~ "Posting your jobs in TrabajarFuera is the best way to reach thousands of "
+#~ "qualified Spanish people who are looking for a job in your country."
+#~ msgstr ""
+#~ "Mostrar sus ofertas de empleo en TrabajarFuera es la mejor manera de "
+#~ "encontrar miles de españoles cualificados que buscan empleo en su país"
+
+#~ msgid "Human Resources"
+#~ msgstr "Recursos Humanos"
+
+#~ msgid "Telemarketing"
+#~ msgstr "Telemarketing"
+
+#~ msgid "Edit jobs"
+#~ msgstr "Editar Empleos"
