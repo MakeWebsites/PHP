@@ -6,7 +6,6 @@ class convC3 {
  
  public function __construct($c2) {
     
-     function convert_country_code( $c2 ) {
       $countries = array(
             'AF' => 'AFG', //Afghanistan
             'AX' => 'ALA', //&#197;land Islands
@@ -260,12 +259,8 @@ class convC3 {
             'ZW' => 'ZWE', //Zimbabwe
       );
       
-      $iso_code = isset( $countries[$c2] ) ? $countries[$c2] : "USA";
-      return $iso_code;
-}   
-
-
-    $this->_c3 = convert_country_code( $c2 );
+      $this->_c3 = isset( $countries[$c2] ) ? $countries[$c2] : "USA";
+       
     }
 
      public function getC3() {

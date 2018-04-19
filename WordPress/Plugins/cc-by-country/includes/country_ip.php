@@ -9,9 +9,6 @@ class country_ip {
 		if(filter_has_var(INPUT_POST, 'country2')) { // Selection by form
 			$this->_c2 = filter_input(INPUT_POST, 'country2'); 
 			} 
-		elseif (isset($_SESSION['c2'])) {
-			$this->_c2 = $_SESSION['c2'];
-		}
 		else { // Selection by IP 
             //Obtaining ip
             $client  = @$_SERVER['HTTP_CLIENT_IP'];
@@ -26,10 +23,11 @@ class country_ip {
                  }
             
             //Obtaining country from geoplugin
-            $ip_data = @json_decode(file_get_contents("http://www.geoplugin.net/json.gp?ip=".$ip));    
-            $c2p = $ip_data->geoplugin_countryCode;
-        (isset ($c2p))? $this ->_c2 = $c2p : $this ->_c2 = "US";    }
+          $ip_request = wp_remote_get("http://ip-api.com/json/".$ip);
+           $ip_data = json_decode(wp_remote_retrieve_body($ip_request));
+           $this ->_c2 = isset($ip_data->countryCode) ? $ip_data->countryCode : "US";           
 	}
+    }
      
     public function getC2() {
     return $this->_c2; }
