@@ -7,7 +7,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-02-15 10:18+0000\n"
+"PO-Revision-Date: 2018-04-07 10:53+0100\n"
 "Language-Team: \n"
 "X-Generator: Poedit 1.8.11\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -50,7 +50,7 @@ msgid "Submit"
 msgstr "Enviar"
 
 #: cc-by-country.php:99
-msgid "Select other country...."
+msgid "Select another country...."
 msgstr "Seleccionar otro país...."
 
 #: cc-by-country.php:110
@@ -94,8 +94,8 @@ msgstr "Excluir título del gráfico"
 msgid "More information"
 msgstr "Más información"
 
-msgid "Please select any chart to display in the shortcode options"
-msgstr "Por favor seleccione algún gráfico en las opciones del shortcode"
+msgid "Drawing the charts"
+msgstr "Generando los gráficos"
 
 msgid "en/climate-change-effects-country/"
 msgstr "es/efectos-del-cambio-climatico-por-pais/"

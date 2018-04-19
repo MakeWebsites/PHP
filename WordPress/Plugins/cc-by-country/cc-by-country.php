@@ -1,19 +1,18 @@
 <?php
+
 /*
-Plugin Name: CC-by-country
-Description: Shows Google charts of anual temperature and precipitations during last century, as well as future changes
-according to A2 and B1 scenarios
-Version: 1.0
+Plugin Name: cc-by-country
+Plugin URI: 
+Description: 
+Version: 1.0.0
 Author: ClimaRisk
+Author URI: www.climarisk.com
 License: GPLv2
 */
 
-session_start();
-
 function cc_by_c_scripts() {
-wp_register_script( 'ajax_google', 'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js');
-wp_register_script( 'cc_bc', plugin_dir_url( __FILE__ ) .  'includes/js/cc-bc.js'); }
-
+wp_register_script( 'gct', plugin_dir_url( __FILE__ ) .  '/includes/js/gct.js');
+}
 add_action('template_redirect', 'cc_by_c_scripts');
 
 // Loading the translation files
@@ -22,116 +21,102 @@ function cc_by_country_load_textdomain() {
   load_plugin_textdomain( 'cc-by-country', false, basename( dirname( __FILE__ ) ) . '/languages' ); 
 }
 
+// GCT function
+        add_action( 'wp_ajax_gt', 'gt' );//admin
+        add_action('wp_ajax_nopriv_gt', 'gt');//frontend
+    function gt() {
+        include_once 'includes/getjtc.php';
+        $c3 = $_GET['c3'];
+        $jsond = array();
+        $jsct = new gct('tas', $c3);
+        $jsond['tas'] = $jsct->getgtc();
+        $jscp = new gct('pr', $c3);
+        $jsond['pr'] = $jscp->getgtc();
+        $jsond['prt'] = __('Precipitation', 'cc-by-country');
+        $jsond['tast'] = __('Temperature', 'cc-by-country');
+        wp_send_json(json_encode($jsond));
+    }
+   
 //Creating the shortcode and showing the graphs
-function showg ($atts) {
-	
-	// Enqueue the registered scripts
-	wp_enqueue_script('ajax_google');
-	wp_enqueue_script('cc_bc');
-	
-	$atts = shortcode_atts( // Defaults include trends and links to ClimaRisk post 
-		array(
-			'trend' => 'true', // Including the tren chart - Default true
-			'ccchart' => 'true', // Including the Climate change chart - Default true
-			'cclink' => 'true' // Including a link to Climaisk post - Default true
-		), $atts, 'cc-by-country' );
+function cc_bc_gc ($atts) {
+    
+    function get_f_content( $file_path ) {
+        ob_start();
+        include $file_path;
+        $contents = ob_get_clean();
+    return $contents;
+    }
+
+$precv = array ('prec', 'Prec', 'pr', 'Precipitation');
+ 
+$atts = shortcode_atts( // Defaults include trends and links to ClimaRisk post 
+        ['ctitle' => 'true', // Including a title - Default true
+	 'cclink' => 'true', // Including a link to Climaisk post - Default true
+         'ctemp' => 'true', // Including the Temperature chart - Default true
+         'cprec' => 'true', // Including the Precipitation chart - Default true
+                        ], $atts, 'cc-by-country' );
 		
-		//Shortcode options
-		($atts['trend'] == false) ? $trend = 'false' : $trend = $atts['trend'];
-		($atts['ccchart'] == false) ? $ccchart = 'false' : $ccchart = $atts['ccchart'];
-		($atts['cclink'] == false) ? $cclink = 'false' : $cclink = $atts['cclink'];
-		
-		include_once "includes/country_ip.php";
-		// Selecting c2
-		if(filter_has_var(INPUT_POST, 'country2')) { // Selection by form
-			$c2 = filter_input(INPUT_POST, 'country2'); 
-			} 
-		elseif (isset($_SESSION['c2'])) {
-			$c2 = $_SESSION['c2'];
-		}
-		else { // Selection by IP
-			$c2d = new country_ip();
-			$c2 = $c2d->getC2(); } 
-		    $_SESSION['c2'] = $c2;
+	//Shortcode options
+	$ctitle = ($atts['ctitle'] === false) ? 'false' : $atts['ctitle'];
+	$cclink = ($atts['cclink'] === false) ? 'false' : $atts['cclink'];
+        $ctemp = ($atts['ctemp'] === false) ? 'false' : $atts['ctemp'];
+        $cprec = ($atts['cprec'] === false) ? 'false' : $atts['cprec'];
+        
+        
+                
+//$mvar = 'tas';
+// Selecting c2
+if (filter_input(INPUT_POST, 'country2')) $c2 = $_POST['country2'];  else  {
+    include_once "includes/country_ip.php";
+    $c2d = new country_ip();
+    $c2 = $c2d->getC2(); }
 
-		// Estimating c3
-		if (!isset($_SESSION['c3']) or filter_has_var(INPUT_POST, 'country2')) {
-		include_once 'includes/convC3.php';
-		$c3d = new convC3($c2);
-		$c3 = $c3d->getC3($c2);
-		$_SESSION['c3'] = $c3; }
-		else {
-			$c3 = $_SESSION['c3'];
-		}
-		
+// Estimating c3
+    include_once 'includes/convC3.php';
+    $c3d = new convC3($c2);
+    $c3 = $c3d->getC3($c2);
+                
 
-	if(filter_has_var(INPUT_POST, 'mvar')) { // Selecting met var by form 
-	$mvar = filter_input(INPUT_POST, 'mvar'); } 
-	else
-	$mvar = 'tas';
 
-	include_once "includes/cctitle.php";
-	$sci = '<div class="row"><div class="col-md-8">';
-		$sci .= new cctitle($_SESSION['c2'], $_SESSION['c3'], $mvar);
-		$sci .= '</div><div class="col-md-4">';
-		if ($cclink != 'false') { //Not set false the link
-		$clink = 'http://climarisk.com/'. __("en/climate-change-effects-country/", "cc-by-country");
-		$sci .= '<a href="'.$clink.'" target="_blank">
-		<img style="padding-right:1%" src="http://climarisk.com/en/wp-content/plugins/shortcodes-cr/img/icon_info.gif">'.__("More information", "cc-by-country").'</a>';
-		}
-		$sci .= '</div></div>';
-
-	include_once "includes/gcm.php";
-	include_once "includes/gcc.php";
-	
-	
-	if ($trend != 'false') {	// Trend has not deselected	
-		$gcm = new gcm($c3, $mvar); 
-		$scm = '<h5>'. __('Trend in the last 100 years', 'cc-by-country') . '</h5>';
-		$scm .= '<div id='.$gcm->gDmv().'></div>';
+include_once "includes/cctitle.php";
+  $sci = '<div class="row"><div class="col-md-8">';
+  $sci .= new cctitle($c2, $c3);
+  $sci .= '</div><div class="col-md-4">';
+    if ($cclink != 'false') { //Not set false the link
+	$clink = 'http://climarisk.com/'. __("en/climate-change-effects-country/", "cc-by-country");
+        $infop = plugin_dir_url( __FILE__ ).'img/icon_info.gif';
+	$sci .= '<a href="'.$clink.'" target="_blank">
+	<img class="align-top" src="'.$infop.'">'.__("More information", "cc-by-country").'</a>';
 	}
-	else $scm = "";
+	$sci .= '</div></div>';
+                
+    // Enqueue the registered scripts and draw
+        wp_enqueue_script('google-jsapi','https://www.google.com/jsapi'); 
+        wp_enqueue_script( 'gct' );   
+    // Form    
+        $scf = '<form id="fms" class="form-inline" method="POST" action="'.get_permalink().'#ccg"><div class="form-group">';
+        $scf .= '<select class="custom-select" id="country2" name="country2"><option selected value="US">'.__('Select another country....', 'cc-by-country').'</option>';
+        $scf .= get_f_content('includes/country_select.html');
+        $scf .= '</div><button type="submit" class="btn btn-primary ml-1">'.__("Submit", "cc-by-country").'</button>';
+        $scf .= '</form>';
+        
+    //Drawing charts
+            $gc = '<div id="bgc"></div>';
+            if ($ctemp != 'false' or $cprec === 'false') {
+            $gc .= '<div id = "gctas"></div>'; }
+            if ($cprec != 'false') {
+            $gc .= '<div id = "gcpr"></div>'; }
+            $imess = __('Drawing the charts', 'cc-by-country');
+            wp_localize_script( 'gct', 'gct',
+            array( 'ajax_url' => admin_url( 'admin-ajax.php' ), 'c3' => $c3, 'fc' => $scf, 
+                'ctemp' => $ctemp, 'cprec' => $cprec, 'imess' => $imess));
+        
+    
+     $sf = '<div id="cf"></div>';  
+    
+       
+return $sci.$gc.$sf;	
 	
-	if ($ccchart != 'false') {	// CC chart not deselected
-		$gcc = new gcc($c3, $mvar);
-		$scc = '<h5>'. __('Expected differences during this century according to A2 and B1 emission scenarios', 'cc-by-country').'</h5>';
-		$scc .= '<div id='.$gcc->gDmv().'></div>';
-	}
-	else $scc = "";
-	
-	if (($trend == 'false') and ($ccchart == 'false')) {
-		$scv = "<h4>".__("Please select any chart to display in the shortcode options", "cc-by-country")."</h4>";
-		$scf = "";
-;	}
-	else {
-		$scv = '<form id="fms" class="form-inline csub" method="POST" action="'.get_permalink().'#ccg"><div class="form-group">';
-		if ($mvar == 'pr') {
-		$scv .= '<label class="form-check-label">
-		<input class="form-check-input csubm" type="radio" name="mvar" id="temp" value="tas">';
-		$scv .= __('Select Temperature', 'cc-by-country');
-		$scv .= '</label>';  }
-		else {
-		$scv .=  '<label class="form-check-label">
-		<input class="form-check-input csubm" type="radio" name="mvar" id="prec" value="pr">';
-		$scv .= __('Select Precipitation', 'cc-by-country');
-		$scv .= '</label>'; }
-		$scv .= '</form></br>';
-		
-		$scf = '<form class="form-inline" method="POST" action="'.get_permalink().'#ccg"><div class="form-group">';
-		$scf .= '<select class="custom-select" id="country2" name="country2"><option selected>'.__('Select other country....', 'cc-by-country').'</option>';
-		$scf .= file_get_contents(plugins_url( 'includes/country_select.php', __FILE__ ));
-		$scf .= '</div><button type="submit" class="btn btn-primary">'.__('Submit', 'cc-by-country').'</button></form>';
-	}
-	
+}  
 
-return $sci.$scm.$scc.$scv.$scf;
-	
-}
-
-add_shortcode('cc_by_country', 'showg')	; 
-
-function cr_unset_session() {
-if (session_status() === PHP_SESSION_ACTIVE)
-   session_unset;
-} 
-add_action('wp_logout', 'cr_unset_session');
+add_shortcode('cc_by_country', 'cc_bc_gc')	;
