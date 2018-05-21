@@ -3,7 +3,7 @@
 /*
 Plugin Name: cc-by-country
 Plugin URI: 
-Description: 
+Description: Observed by-country changes in temperatures and precipitations 
 Version: 1.0.0
 Author: ClimaRisk
 Author URI: www.climarisk.com
@@ -34,6 +34,7 @@ function cc_by_country_load_textdomain() {
         $jsond['pr'] = $jscp->getgtc();
         $jsond['prt'] = __('Precipitation', 'cc-by-country');
         $jsond['tast'] = __('Temperature', 'cc-by-country');
+        $jsond['tity'] = __('Year', 'cc-by-country');
         wp_send_json(json_encode($jsond));
     }
    
@@ -101,15 +102,15 @@ include_once "includes/cctitle.php";
         $scf .= '</form>';
         
     //Drawing charts
-            $gc = '<div id="bgc"></div>';
+            $gc = '<div id="bgc"><h4>'.__('Drawing the charts', 'cc-by-country').'.....</h4></div>';
             if ($ctemp != 'false' or $cprec === 'false') {
             $gc .= '<div id = "gctas"></div>'; }
             if ($cprec != 'false') {
             $gc .= '<div id = "gcpr"></div>'; }
-            $imess = __('Drawing the charts', 'cc-by-country');
+            //$imess = ;
             wp_localize_script( 'gct', 'gct',
             array( 'ajax_url' => admin_url( 'admin-ajax.php' ), 'c3' => $c3, 'fc' => $scf, 
-                'ctemp' => $ctemp, 'cprec' => $cprec, 'imess' => $imess));
+                'ctemp' => $ctemp, 'cprec' => $cprec));
         
     
      $sf = '<div id="cf"></div>';  
