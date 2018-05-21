@@ -1,0 +1,13 @@
+UPDATE `put2a` SET `cultivo7`= "Maizgrano",`cultivo8`="otrashortalizas", 
+`cultivo9`= "Broculi", `cultivo10`= "Calabazaycalabacin", `cultivo11`= "Broculi" WHERE `cultivo12` = "acelga" and `cultivo7` is null
+
+UPDATE `put2a` SET `cultivo7`= "Cebada",`cultivo8`="otrashortalizas", 
+`cultivo9`= "Cebada", `cultivo10`= "trigoblando", `cultivo11`= "Cebada" WHERE `cultivo12` = "ajo" and `cultivo7` is null
+
+SELECT `rotacion`, count(`rotacion`) as num_rot FROM `pumasrot` where `cultivo12` = "avena" group by `rotacion` ORDER BY count(`rotacion`) desc
+
+SELECT distinct (`cultivo7`) FROM `put` order by `cultivo7`
+
+UPDATE `riego12` join navarra_temp.nriego12 on navarra_temp.nriego12.idp = riego12.idp SET navarra_temp.nriego12.oct = riego12.oct, navarra_temp.nriego12.nov = riego12.nov, navarra_temp.nriego12.dic = riego12.dic, navarra_temp.nriego12.ene = riego12.ene, navarra_temp.nriego12.feb = riego12.feb, navarra_temp.nriego12.mar = riego12.mar, navarra_temp.nriego12.abr = riego12.abr, navarra_temp.nriego12.may = riego12.may, navarra_temp.nriego12.jun = riego12.jun, navarra_temp.nriego12.jul = riego12.jul, navarra_temp.nriego12.ago = riego12.ago, navarra_temp.nriego12.sep = riego12.sep
+
+SELECT `cultivo`, sum(`Total`) FROM `ns_perc` where `riego` = 'Gravedad' group by `cultivo` order by sum(`Total`) desc limit 5
