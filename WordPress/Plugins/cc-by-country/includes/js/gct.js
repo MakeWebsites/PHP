@@ -21,7 +21,7 @@ function drawgc() {
  },
  dataType: "json",
  beforeSend:function() { 
-     $j( "#bgc" ).html('<h4>' + gct.imess + '...</h4>'); 
+     //$j( "#bgc" ).html('<h4>' + gct.imess + '...</h4>'); 
  },
  complete:function() {
      $j( "#bgc" ).html(""); 
@@ -39,7 +39,7 @@ function drawgc() {
       var formatter = new google.visualization.NumberFormat({groupingSymbol: '', pattern: '#', });
       var formatter2 = new google.visualization.NumberFormat({pattern: '#.#'});
       var options = {pointSize: 3, pointShape: 'circle', legend:'none',  
-          hAxis: {gridlines : {count : 12}, format: "#", viewWindowMode: "pretty", title: 'Year'}, trendlines: { 0: {} }, }
+          hAxis: {gridlines : {count : 10}, format: "#", viewWindowMode: "pretty", title: jdat['tity']}, trendlines: { 0: {} }, }
         
         formatter.format(ctas, 0);
         formatter2.format(ctas, 1);
