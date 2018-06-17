@@ -23,9 +23,9 @@ class country_ip {
                  }
             
             //Obtaining country from geoplugin
-          $ip_request = wp_remote_get("http://ip-api.com/json/".$ip);
+           $ip_request = wp_remote_get("http://api.ipstack.com/".$ip."?access_key=8c5501598df9076e1df4a58f30373fe5");
            $ip_data = json_decode(wp_remote_retrieve_body($ip_request));
-           $this ->_c2 = isset($ip_data->countryCode) ? $ip_data->countryCode : "US";           
+           $this ->_c2 = isset($ip_data->country_code) ? $ip_data->country_code : "US";           
 	}
     }
      
