@@ -21,6 +21,7 @@ function cr_registers () {
 	wp_enqueue_style('bootstrap-style', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css'); // Registering Bootstrap 4
     wp_enqueue_script( 'bootstrap-js', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js');
 	wp_enqueue_style( 'cr-css', plugin_dir_url( __FILE__ ).'css/cr.css');
+	wp_enqueue_script('cr-js', plugin_dir_url( __FILE__ ).'js/cr.js');
 }
 add_action('wp_enqueue_scripts', 'cr_registers');
 
@@ -32,12 +33,18 @@ remove_action( 'genesis_header', 'genesis_do_header' );
 //Custom header
 add_action ('genesis_header', 'cr_custom_header');
 function cr_custom_header() { ?>
-<div class="pt-1">
+<div class="row pt-1">
+<div class="col-7">
 <a href="<?php echo site_url() ?>/contact/" title="Contact ClimaRisk">
-	<img  width="250" class="img-fluid float-left align-middle" src="<?php echo plugin_dir_url( __FILE__ ) ?>/images/climarisk-header.png" 
-		alt="ClimaRisk"></a>
-	<a href="http://climarisk.com/es"> <img class="img-fluid float-right align-top mt-1" src="<?php echo plugin_dir_url( __FILE__ ) ?>/images/es.png" 
+	<img  width="250" class="img-fluid float-left align-middle" src="<?php echo plugin_dir_url( __FILE__ ) ?>/images/climarisk-header.gz" 
+		alt="ClimaRisk"></a></div>
+		<div class="col-5">
+		<a href="https://climarisk.com/es"> <img class="img-fluid float-right mt-2 pt-1 imgs" src="<?php echo plugin_dir_url( __FILE__ ) ?>/images/es.gz" 
 		alt="ClimaRisk en español" title="ClimaRisk en español"></a>
+		<a href="https://twitter.com/Clima_Risk" target="_blank"> <img class="img-fluid rounded float-right align-top mt-2 mr-4 imgs" style="height:20%;" src="<?php echo plugin_dir_url( __FILE__ ) ?>/images/twitter-climarisk.gif" 
+		alt="ClimaRisk Twitter" title="ClimaRisk Twitter"></a>
+		<a href="https://www.facebook.com/climarisk/" target="_blank"> <img class="img-fluid rounded float-right align-top mt-2 mr-4 imgs" style="height:20%;" src="<?php echo plugin_dir_url( __FILE__ ) ?>/images/facebook-climarisk.png" 
+		alt="ClimaRisk Facebook site" title="ClimaRisk Facebook site"></a></div>
 </div>
 	 <?php
 }
@@ -59,36 +66,22 @@ return $browser;
 	
 //* Customize the Genesis credits
 add_filter( 'genesis_footer_creds_text', 'cr_footer_creds_text' );
-function cr_footer_creds_text() {
-	$navegador = find_browser();
-		switch ($navegador) {
-			case "Chrome":
-			$margen = 0;
-			break;
-			case "Firefox":
-			$margen = -3;
-			break;
-			case "IE":
-			$margin = 0;
-			break;
-		}
-	//echo $margen.'</br>';
-	echo '<div class="creds" style="margin-top:'.$margen.'%;margin-left:2%;float:left;';
-	if ($navegador == "Chrome") echo 'color:white';
-	echo '">';
-	echo 'Copyright &copy; ';
-	echo date('Y');
-	echo ' &middot; <a ';
-	if ($navegador == "Chrome") echo 'style="color:white"';
-	echo 'href="http://climarisk.com" title="Climate Risk management">ClimaRisk</a>';
-	echo '</div>';
+function cr_footer_creds_text() { ?>
+	<div class="float-left">Copyright &copy
+	<?php echo date('Y'); ?>
+	&middot
+	<a href="http://climarisk.com" title="ClimaRisk">
+	<img  class="img-fluid mr-1 align-top" src="<?php echo plugin_dir_url( __FILE__ ) ?>/images/climarisk.png" 
+		alt="ClimaRisk">ClimaRisk
+	</a></div>
 	
+<?php 	
 }
 
 function cr_login_logo() { // Customize login logo ?> 
     <style type="text/css">
         body.login div#login h1 a {
-            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/climarisk-logo.gif);
+            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/climarisk.png);
             padding-bottom: 30px;
         }
     </style>
