@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Met Habana</title>
+    <!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.js"></script>
+    <script src="https://kit.fontawesome.com/3acc335195.js" crossorigin="anonymous"></script>
+    <script src="wws.js"></script>
+    <script src="wwi.js"></script>
+</head>
+
+<div id="met-hab">
+    
+    <div class="alert alert-info" role="alert" style="width:45%">
+
+        <h3>Pronóstico del tiempo para mañana en <b>La Habana</b></h3>
+        <div v-if="!data">
+            <h4>Cargando el pronóstico....</h4>        
+        </div>
+        <div v-else>
+            <h4>Minimas de <b>{{data.minTemp}}&deg;C</b> y máximas de <b>{{data.maxTemp}}&deg;C</b></h4>
+            <h3><wwi v-bind:wep="data.weather"></wwi> -  <b><wws v-bind:wep="data.weather"></wws> </h3>
+        </div>
+        
+    </div>
+
+</div>
+
+
+<script>
+new Vue ({
+    el: '#met-hab',
+    data() {
+        return {
+            data: null,
+            ws: '',
+            wi: '' }
+            },
+    mounted () {
+        axios
+        .get('https://cors-anywhere.herokuapp.com/https://worldweather.wmo.int/en/json/280_en.json')
+        .then(response => (this.data = response.data.city.forecast.forecastDay[1]));  
+     }
+});
+
+</script>
